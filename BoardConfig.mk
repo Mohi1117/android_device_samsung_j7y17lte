@@ -42,5 +42,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.universal7870
 
-#twrp
-RECOVERY_VARIANT := twrp
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_santos10
