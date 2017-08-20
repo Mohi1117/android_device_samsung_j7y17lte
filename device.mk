@@ -22,7 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -46,7 +46,9 @@ PRODUCT_PACKAGES += \
 #fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd \
-    fingerprint.exynos5
+    fingerprint.exynos5 \
+    libbauthtzcommon_shim
+
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
