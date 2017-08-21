@@ -1,7 +1,11 @@
 ## SM-J730G (2017)
 ## j7y17lte
+LOCAL_PATH := device/samsung/j7y17lte
 
-USE_CAMERA_STUB := true
+#USE_CAMERA_STUB := true
+
+#Include path
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universal7870
@@ -9,27 +13,39 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
-TARGET_BOARD_PLATFORM_GPU := Mali-T830MP2
+TARGET_SLSI_VARIANT := cm
+TARGET_SOC := exynos7870
+#TARGET_BOARD_PLATFORM_GPU := Mali-T830MP2
 
 # Architecture 
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a15
-TARGET_CPU_SMP := true
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := generic
+#TARGET_CPU_SMP := true
 
-#TARGET_2ND_ARCH := arm
-#TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-#TARGET_2ND_CPU_ABI := armeabi-v7a
-#TARGET_2ND_CPU_ABI2 := armeabi
-#TARGET_2ND_CPU_VARIANT := cortex-a15
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := generic
 
 # kernel
-BOARD_KERNEL_CMDLINE := 
+#BOARD_KERNEL_CMDLINE := 
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+#TARGET_PREBUILT_KERNEL := device/samsung/j7y17lte/kernel
+#TARGET_PREBUILT_DTB := device/samsung/j7y17lte/dt.img
+TARGET_KERNEL_CONFIG := j7y17lte_eur_openm_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/j7y17lte
+TARGET_USES_UNCOMPRESSED_KERNEL := true
+BOARD_KERNEL_SEPERATED_DT := true
+TAGRET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
 # Partition info
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x2000000
@@ -39,9 +55,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x664000000
 BOARD_CACHEIMAGE_PARTITION_SIZE := 0xC800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/j730g/kernel
-TARGET_PREBUILT_DTB := device/samsung/j730g/dt.img
-TARGET_SYSTEM_PROP := device/samsung/j730g/system.prop
+TARGET_SYSTEM_PROP := device/samsung/j7y17lte/system.prop
 
 # Recovery
 RECOVERY_SDCARD_ON_DATA := true
@@ -57,7 +71,7 @@ BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j730g/bootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7y17lte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi

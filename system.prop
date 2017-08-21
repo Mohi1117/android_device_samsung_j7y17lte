@@ -1,6 +1,7 @@
+ro.hardware=samsungexynos7870
 ro.sf.lcd_density=420
 ro.arch=exynos7870
-ro.chipname=your-exynos7870
+ro.chipname=exynos7870
 ro.sf.lcd_density=240
 persist.sys.usb.config=mtp,adb
 #
