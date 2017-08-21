@@ -2,7 +2,7 @@
 #PRODUCT_RELEASE_NAME := j7y17lte
 
 #Inherit device configuration
-$(call inherit-product, device/samsung/j7y17lte/device.mk
+$(call inherit-product, device/samsung/j7y17lte/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
