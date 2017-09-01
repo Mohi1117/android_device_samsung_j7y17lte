@@ -1,3 +1,5 @@
+#inherit exynos5 hals
+include hardware/samsung/slsi/exynos5/exynos5.mk
 LOCAL_PATH := device/samsung/j7y17lte
 
 #overlays
