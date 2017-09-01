@@ -16,8 +16,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 #hwui build properties
 ro.hwui.texture_cache_size=50
