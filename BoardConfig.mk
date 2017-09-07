@@ -15,10 +15,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 #COMMON_GLOBAL_CFLAGS +=
 
 #################################HALS
-#bluetooth
-PRODUCT_PACKAGES += \
-bluetooth.default
-
 #camera
 PRODUCT_PACKAGES += \
 camera.goldfish.jpeg \
