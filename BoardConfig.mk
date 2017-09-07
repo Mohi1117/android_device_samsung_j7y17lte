@@ -19,11 +19,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 PRODUCT_PACKAGES += \
 gatekeeper.exynos7870
 
-#gralloc
-PRODUCT_PACKAGES += \
-gralloc.default \
-gralloc.exynos5
-
 #hwcomposer
 PRODUCT_PACKAGES += \
 hwcomposer.exynos5
