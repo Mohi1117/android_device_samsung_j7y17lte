@@ -15,14 +15,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 #COMMON_GLOBAL_CFLAGS +=
 
 #################################HALS
-#camera
-PRODUCT_PACKAGES += \
-camera.goldfish.jpeg \
-camera.goldfish \
-camera.ranchu.jpeg \
-camera.ranchu \
-camera.universal7870
-
 #fingerprint
 PRODUCT_PACKAGES += \
 fingerprint.default \
