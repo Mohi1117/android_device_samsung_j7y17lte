@@ -40,10 +40,6 @@ local_time.default
 PRODUCT_PACKAGES += \
 memtrack.exynos5.so
 
-#nfc
-PRODUCT_PACKAGES += \
-nfc_nci.universal7870.so
-
 #power
 PRODUCT_PACKAGES += \
 power.default \
