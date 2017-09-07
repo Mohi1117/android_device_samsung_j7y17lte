@@ -15,17 +15,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 #COMMON_GLOBAL_CFLAGS +=
 
 #################################HALS
-#audio
-PRODUCT_PACKAGES += \
-audio_policy.default \
-audio.a2dp.default \
-audio.playback_record.default \
-audio.primary.default \
-audio.primary.goldfish \
-audio.primary.universal7870 \
-audio.r_submix.default \
-audio.usb.default
-
 #bluetooth
 PRODUCT_PACKAGES += \
 bluetooth.default
