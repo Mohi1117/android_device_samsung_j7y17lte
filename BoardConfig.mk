@@ -46,12 +46,6 @@ power.default \
 power.exynos5 \
 power.goldfish
 
-#sensors
-PRODUCT_PACKAGES += \
-sensors.goldfish \
-sensors.ranchu \
-sensors.universal7870
-
 #vibrator
 PRODUCT_PACKAGES += \
 vibrator.default \
