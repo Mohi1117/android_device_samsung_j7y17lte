@@ -19,12 +19,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 PRODUCT_PACKAGES += \
 gatekeeper.exynos7870
 
-#gps
-PRODUCT_PACKAGES += \
-gps.default \
-gps.goldfish \
-gps.ranchu
-
 #gralloc
 PRODUCT_PACKAGES += \
 gralloc.default \
