@@ -15,12 +15,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 #COMMON_GLOBAL_CFLAGS +=
 
 #################################HALS
-#fingerprint
-PRODUCT_PACKAGES += \
-fingerprint.default \
-fingerprint.goldfish \
-fingerprint.ranchu
-
 #gatekeeper
 PRODUCT_PACKAGES += \
 gatekeeper.exynos7870
