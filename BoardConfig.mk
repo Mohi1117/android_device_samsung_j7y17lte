@@ -15,16 +15,20 @@ BOARD_SECCOMP_POLICY += device/samsung/j7y17lte/seccomp
 # Inherit from the proprietary version
 -include vendor/samsung/j7y17lte/BoardConfigVendor.mk
 
-USE_CAMERA_STUB := true
-
-TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := universal7870
-
 # Platform
-TARGET_SOC := exynos7870
+BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SLSI_VARIANT := cm
-TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
+TARGET_SOC := exynos7870
+TARGET_BOOTLOADER_BOARD_NAME := universal7870
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
+
+# Audio HAL variant
+TARGET_AUDIOHAL_VARIANT := samsung
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
 
 # Flags
 #TARGET_GLOBAL_CFLAGS +=
