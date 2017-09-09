@@ -1,9 +1,14 @@
 #inherit exynos5 hals
 include hardware/samsung_slsi/exynos5/exynos5.mk
-LOCAL_PATH := device/samsung/j7y17lte
 
+LOCAL_PATH := device/samsung/j7y17lte
 #overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+#graphics
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 #custom dtb
 #PRODUCT_PACKAGES += \
