@@ -37,7 +37,3 @@ ro.hwui.text_large_cache_height=1024
 
 #dalvik heap properties
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/j7y17lte/rootdir/fstab.samsungexynos7870
-
