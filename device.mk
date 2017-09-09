@@ -27,6 +27,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+#more packages
+PRODUCT_PACKAGES += \
+	libsamsung_symbols \
+	SamsungServiceMode \
+	Torch
+
 #custom dtb
 #PRODUCT_PACKAGES += \
 #    dtbhtoolExynos
