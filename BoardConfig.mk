@@ -32,10 +32,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 #COMMON_GLOBAL_CFLAGS +=
 
 #################################HALS
-#gatekeeper
-PRODUCT_PACKAGES += \
-	gatekeeper.exynos7870
-
 #hwcomposer
 PRODUCT_PACKAGES += \
 	hwcomposer.exynos5
@@ -55,7 +51,7 @@ PRODUCT_PACKAGES += \
 
 #memtrack
 PRODUCT_PACKAGES += \
-	memtrack.exynos5.so
+	memtrack.exynos5
 
 #power
 PRODUCT_PACKAGES += \
