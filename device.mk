@@ -66,3 +66,16 @@ ro.hwui.text_large_cache_height=1024
 
 #dalvik heap properties
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
+# Inherit board specific products
+-include $(LOCAL_PATH)/product/*.mk
+
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
+# call Samsung LSI board support package
+$(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
+$(call inherit-product, hardware/samsung_slsi-cm/exynos7420/exynos7420.mk)
+
+# call the proprietary setup
+$(call inherit-product, vendor/samsung/j7y17lte/j7y17lte-vendor.mk)
