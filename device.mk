@@ -1,9 +1,15 @@
-#inherit exynos5 hals
-include hardware/samsung_slsi/exynos5/exynos5.mk
-
-LOCAL_PATH := device/samsung/j7y17lte
 #overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+LOCAL_PATH := device/samsung/j7y17lte
+
+#rootdir
+PRODUCT_PACKAGES += \
+	fstab.samsungexynos7870 \
+	init.samsung.rc \
+	init.samsungexynos7870.rc \
+	init.samsungexynos7870.usb.rc \
+	ueventd.samsungexynos7870.rc
 
 #permissions
 PRODUCT_COPY_FILES += \
