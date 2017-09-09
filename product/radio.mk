@@ -17,7 +17,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Properties
-PRODUCT_PROPERTY_OVERRIDES +\= \
+PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.add_power_save=1 \
 	persist.radio.apm_sim_not_pwdn=1 \
 	rild.libpath=/system/lib/libsec-ril.so \
