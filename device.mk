@@ -11,7 +11,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 #offmode charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+	charger_res_images \
+	cm_charger_res_images
 
 #display density properties
 PRODUCT_PROPERTY_OVERRIDES += \
