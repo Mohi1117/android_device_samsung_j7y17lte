@@ -12,8 +12,8 @@
         "target_path": "hardware/samsung_slsi-cm/exynos5"
     },
     {
-        "repository": "android_hardware_samsung_slsi-cm_exynos7420",
-        "target_path": "hardware/samsung_slsi-cm/exynos7420"
+        "repository": "android_hardware_samsung_slsi-cm_exynos7870",
+        "target_path": "hardware/samsung_slsi-cm/exynos7870"
     },
     {
         "repository": "android_hardware_samsung_slsi-cm_openmax",
