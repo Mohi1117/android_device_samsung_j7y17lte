@@ -1,3 +1,6 @@
+#assert
+TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
+
 LOCAL_PATH := device/samsung/j7y17lte
 
 # Include path
