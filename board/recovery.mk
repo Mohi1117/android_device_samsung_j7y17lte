@@ -9,7 +9,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/13600000.usb/13600000.dwc3/gadg
 
 # TWRP specific
 ifeq ($(RECOVERY_VARIANT),twrp)
-TARGET_RECOVERY_FSTAB := device/samsung/j7y17lte/ramdisk/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/j7y17lte/rootdir/recovery.fstab
 TW_BRIGHTNESS_PATH := "/sys/devices/14800000.dsim/backlight/panel/brightness"
 TW_DEFAULT_BRIGHTNESS := 180
 TW_EXCLUDE_SUPERSU := true
