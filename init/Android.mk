@@ -19,10 +19,26 @@ LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.wifi.rc
+LOCAL_MODULE            := init.carrier.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := init.wifi.rc
+LOCAL_SRC_FILES         := init.carrier.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.rilchip.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := init.rilchip.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.rilepdg.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := init.rilepdg.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
@@ -51,9 +67,41 @@ LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE            := init.usb.configfs.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := init.usb.configfs.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.usb.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := init.usb.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := init.wifi.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := init.wifi.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE		:= ueventd.samsungexynos7870.rc
 LOCAL_MODULE_TAGS	:= optional eng
 LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= ueventd.samsungexynos7870.rc
 LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := ueventd.rc
+LOCAL_MODULE_TAGS       := optional eng
+LOCAL_MODULE_CLASS      := ETC
+LOCAL_SRC_FILES         := ueventd.rc
+LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)

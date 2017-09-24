@@ -1,4 +1,3 @@
-RECOVERY_VARIANT := twrp
 #assert
 TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
 

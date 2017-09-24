@@ -21,5 +21,5 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_REBOOT_BOOTLOADER := true
 TW_THEME := portrait_hdpi
 else
-TARGET_RECOVERY_FSTAB := device/samsung/j7y17lte/rootdir/fstab.samsungexynos7870
+TARGET_RECOVERY_FSTAB := device/samsung/j7y17lte/init/fstab.samsungexynos7870
 endif
