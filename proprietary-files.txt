@@ -491,6 +491,7 @@ lib/hw/gps.default.so
 lib/hw/gralloc.exynos5.so
 lib/hw/nfc_nci.universal7870.so
 lib/hw/sensors.universal7870.so
+lib/libAutoEnhance.so
 lib/libarcsoft_panorama_burstcapture.so
 lib/libbauthserver.so
 lib/libbauthtzcommon.so
@@ -511,6 +512,7 @@ lib/libsec-ril.so
 lib/libsecnativefeature.so
 lib/libsensorlistener.so
 lib/libstagefright_hdcp.so
+lib/libstainkiller.so
 lib/libsynaFpSensorTestNwd.so
 lib/libtlc_proxy_tui.so
 lib/libtlc_spay.so
