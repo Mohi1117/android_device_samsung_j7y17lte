@@ -1,7 +1,7 @@
 # kernel
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPQA18A000KU
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPQA18A000KU --dt $(LOCAL_PATH)/dt.img
 TARGET_KERNEL_CONFIG := j7y17ltem_00_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j7y17lte
 TARGET_KERNEL_ARCH := arm64
