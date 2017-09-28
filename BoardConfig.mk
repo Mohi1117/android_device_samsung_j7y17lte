@@ -7,13 +7,13 @@ LOCAL_PATH := device/samsung/j7y17lte
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # SELinux
-BOARD_SEPOLICY_DIRS := device/samsung/j7y17lte/sepolicy
+BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
 # SECComp filters
-BOARD_SECCOMP_POLICY += device/samsung/j7y17lte/seccomp
+BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 
 # Inherit board specific defines
--include device/samsung/j7y17lte/board/*.mk
+-include $(LOCAL_PATH)/board/*.mk
 
 # Inherit from the proprietary version
 -include vendor/samsung/j7y17lte/BoardConfigVendor.mk
@@ -44,9 +44,7 @@ PRODUCT_PACKAGES += \
 	hwcomposer.exynos5
 
 #keystore
-PRODUCT_PACKAGES += \
-	keystore.default \
-	keystore.exynos7870
+BOARD_USES_TRUST_KEYMASTER := true
 
 #lights
 PRODUCT_PACKAGES += \

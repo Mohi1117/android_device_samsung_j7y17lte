@@ -1,11 +1,6 @@
+LOCAL_PATH := device/samsung/j7y17lte
 #overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-LOCAL_PATH := device/samsung/j7y17lte
-
-#mcclient
-PRODUCT_PACKAGES += \
-	libMcClient
 
 #rootdir
 PRODUCT_PACKAGES += \
@@ -54,11 +49,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Inherit board specific products
 -include $(LOCAL_PATH)/product/*.mk
-
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
 
 # call Samsung LSI board support package
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
