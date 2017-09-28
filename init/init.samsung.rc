@@ -1,24 +1,14 @@
-#
-# IMPORTANT: Do not create world writable files or directories.
-# This is a common source of Android security bugs.
-#
-
+on init
 # [ SEC_SELINUX_PORTING_COMMON
     # for audit message
     chown system system /proc/avc_msg
     chmod 0660 /proc/avc_msg
 # ] SEC_SELINUX_PORTING_COMMON
 
-    # Storage views to support runtime permissions
+# Storage views to support runtime permissions
     mkdir /storage 0755 root root
 
-    # scheduler tunables
-    # Disable auto-scaling of scheduler tunables with hotplug. The tunables
-    # will vary across devices in unpredictable ways if allowed to scale with
-    # cpu cores.
     write /proc/sys/kernel/sched_compat_yield 1
-
-    # Create cgroup mount points for process groups
     write /dev/cpuctl/cpu.shares 1024
     mkdir /dev/cpuctl/bg_non_interactive
     chown system system /dev/cpuctl/bg_non_interactive/tasks
@@ -65,7 +55,7 @@
     chmod 0660 /sys/kernel/hmp/down_threshold
     chmod 0660 /sys/kernel/hmp/up_threshold
 
-    # reset_reason
+# reset_reason
     chown system system /proc/reset_reason
     chmod 0600 /proc/reset_reason
     chown system system /proc/reset_reason_extra_info
@@ -75,7 +65,7 @@
     chown system system /proc/auto_comment
     chmod 0600 /proc/auto_comment
 
-    # ap hw param data
+# ap hw param data
     chown system system /sys/class/sec/sec_hw_param/ap_info
     chmod 0600 /sys/class/sec/sec_hw_param/ap_info
     chown system system /sys/class/sec/sec_hw_param/ddr_info
@@ -137,11 +127,11 @@ on post-fs-data
     # mobicore
     export MC_AUTH_TOKEN_PATH /efs
     mkdir /efs/TEE  0770 radio system
-	  chmod 0660 /dev/t-base-tui
+    chmod 0660 /dev/t-base-tui
     chown system system /dev/t-base-tui
     start mobicore
 
-    mkdir /data/misc/radio 0775 system radio
+    chmod 0775 /data/misc/radio
 
     # NFC
     mkdir /data/nfc 0700 nfc nfc
@@ -192,24 +182,38 @@ on post-fs-data
     chown root root /system/etc/security/.drm
     chmod 0775 /system/etc/security/.drm
 
+    # Added for Playready DRM Support
+    #mkdir /data/data/.drm 0775
+    #chown drm system /data/data/.drm
+    #chmod 0775 /data/data/.drm
+    #mkdir /data/data/.drm/.playready 0775
+    #chown drm system /data/data/.drm/.playready
+    #chmod 0775 /data/data/.drm/.playready
+
+    # Added for Playready DCM DRM Support
+    #mkdir /data/.dcmdrm 0775
+    #chown drm system /data/.dcmdrm
+    #chmod 0775 /data/.dcmdrm
+    #mkdir /data/.dcmdrm/.playready 0775
+    #chown drm system /data/.dcmdrm/.playready
+    #chmod 0775 /data/.dcmdrm/.playready
+
     # Added drm folder to copy drm plugins
     mkdir /system/lib/drm 0775
     chown root root /system/lib/drm
     chmod 0775 /system/lib/drm
-
 # ]
 
     # FIDO
     mkdir /data/.fido 0700 system system
-
-# [ SEC_SELINUX_PORTING_COMMON
+	
+# [ SEC_SELINUX_PORTING COMMON
     restorecon -R /efs
     restorecon -R /carrier
-# ] SEC_SELINUX_PORTING_COMMON
+# ] SEC_SELINUX_PORTING COMMON
 
 on boot
-
-	# KNOX KAP
+    # KNOX KAP
     chown system system /dev/knox_kap
     chmod 0660 /dev/knox_kap
 
@@ -278,6 +282,8 @@ on boot
     chmod 0660 /sys/class/sec_touchkey/input/enabled
     chown system system /sys/class/sec/sec_touchkey/input/enabled
     chown system radio /sys/class/sec/sec_touchkey/brightness
+    chown system radio /sys/class/sec/sec_touchkey/touchkey_light_update
+    chown system radio /sys/class/sec/sec_touchkey/touchkey_light_table_write
 
 # Permissions for Auto Input
     chown system system /sys/class/sec/sec_auto_input/enable
@@ -305,6 +311,20 @@ on boot
 
     chown radio system /sys/devices/system/cpu/kernel_max
     chmod 0664 /sys/devices/system/cpu/kernel_max
+
+    # Change permission for input booster
+    chown system radio /sys/class/input_booster/level
+    chown system radio /sys/class/input_booster/head
+    chown system radio /sys/class/input_booster/tail
+    chown system radio /sys/class/input_booster/touchkey/level
+    chown system radio /sys/class/input_booster/touchkey/freq
+    chown system radio /sys/class/input_booster/touchkey/time
+    chmod 0664 /sys/class/input_booster/level
+    chmod 0664 /sys/class/input_booster/head
+    chmod 0664 /sys/class/input_booster/tail
+    chmod 0664 /sys/class/input_booster/touchkey/level
+    chmod 0664 /sys/class/input_booster/touchkey/freq
+    chmod 0664 /sys/class/input_booster/touchkey/time
 
  # permission for CHARGING
    mkdir /efs/Battery 0775 radio system
@@ -335,6 +355,7 @@ on boot
    chown system radio /sys/class/power_supply/battery/factory_mode_relieve
    chown system radio /sys/class/power_supply/battery/factory_mode_bypass
    chown system radio /sys/class/power_supply/battery/normal_mode_bypass
+   chown system radio /sys/class/power_supply/battery/factory_voltage_regulation
    chown media sdcard_rw /sys/class/power_supply/battery/store_mode
    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/call
    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/video
@@ -451,9 +472,14 @@ on boot
    chmod 0660 /sys/class/power_supply/battery/cisd_data
    chown system radio /sys/class/power_supply/battery/cisd_data_json
    chmod 0660 /sys/class/power_supply/battery/cisd_data_json
+   chown system system /efs/FactoryApp/cisd_fullcaprep_max
+   chmod 0640 /efs/FactoryApp/cisd_fullcaprep_max
+   chown system radio /sys/class/power_supply/battery/cisd_data_efs_path
+   chmod 0660 /sys/class/power_supply/battery/cisd_data_efs_path
    chown system system /efs/FactoryApp/cisd_data
    chmod 0640 /efs/FactoryApp/cisd_data
-
+   chown radio system /efs/Battery/batt_capacity_max
+   chmod 0664 /efs/Battery/batt_capacity_max
     # OTG Test
     chown system radio /sys/class/host_notify/usb_otg/booster
     chmod 0664 /sys/class/host_notify/usb_otg/booster
@@ -640,6 +666,10 @@ on charger
     chmod 0660 /sys/class/power_supply/battery/cisd_fullcaprep_max
     chown system radio /sys/class/power_supply/battery/cisd_data
     chmod 0660 /sys/class/power_supply/battery/cisd_data
+    chown system system /efs/FactoryApp/cisd_fullcaprep_max
+    chmod 0640 /efs/FactoryApp/cisd_fullcaprep_max
+    chown system radio /sys/class/power_supply/battery/cisd_data_efs_path
+    chmod 0660 /sys/class/power_supply/battery/cisd_data_efs_path
     chown system system /efs/FactoryApp/cisd_data
     chmod 0640 /efs/FactoryApp/cisd_data
     chown radio system /efs
@@ -647,6 +677,8 @@ on charger
     mkdir /efs/Battery 0775 radio system
     chown radio system /efs/Battery
     chmod 0775 /efs/Battery
+    chown radio system /efs/Battery/batt_capacity_max
+    chmod 0664 /efs/Battery/batt_capacity_max
     copy /system/vendor/firmware/battery_data.dat /efs/Battery/battery_data.dat
     chmod 0400 /efs/Battery/battery_data.dat
     write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
