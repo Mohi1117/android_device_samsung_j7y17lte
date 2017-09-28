@@ -50,7 +50,7 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/samsung/j7y17lte/system.prop
 
 # Inherit board specific products
 -include $(LOCAL_PATH)/product/*.mk
