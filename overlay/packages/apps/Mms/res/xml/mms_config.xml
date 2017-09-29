@@ -41,9 +41,9 @@
     <bool name="enableSplitSMS">false</bool>
 
     <!-- User-Agent parameter used in MMS http request -->
-    <string name="userAgent">SAMSUNG-SM-J730GM-Mms</string>
+    <string name="userAgent">SAMSUNG-GT-I9500-Mms</string>
 
     <!-- UAProf URL -->
-    <string name="uaProfUrl">http://wap.samsungmobile.com/uaprof/SM-J730GM.xml</string>
+    <string name="uaProfUrl">http://wap.samsungmobile.com/uaprof/GT-I9500.xml</string>
 
 </mms_config>
