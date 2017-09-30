@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/a5y17lte
+DEVICE_PATH := device/samsung/j7y17lte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
@@ -51,6 +51,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
+
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Kernel config
