@@ -1,31 +1,21 @@
 #assert
 TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
 
-LOCAL_PATH := device/samsung/j7y17lte
+DEVICE_PATH := device/samsung/j7y17lte
 
-# Include path
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+# cpboot-daemon for modem
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/sbin/cbd:root/sbin/cbd
 
-# SELinux
-BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
-
-# SECComp filters
-BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+# samsung's sswap
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/sbin/sswap:root/sbin/sswap
 
 # Inherit board specific defines
--include $(LOCAL_PATH)/board/*.mk
+-include $(DEVICE_PATH)/board/*.mk
 
 # Inherit from the proprietary version
 -include vendor/samsung/j7y17lte/BoardConfigVendor.mk
-
-# Platform
-BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := exynos5
-TARGET_SLSI_VARIANT := cm
-TARGET_SOC := exynos7870
-TARGET_BOOTLOADER_BOARD_NAME := universal7870
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 
 # Audio HAL variant
 TARGET_AUDIOHAL_VARIANT := samsung

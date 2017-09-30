@@ -1,0 +1,26 @@
+####################
+# OMX              #
+####################
+
+# Samsung LSI OpenMAX
+TARGET_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
+
+# Samsung OpenMAX Video
+BOARD_USE_STOREMETADATA := true
+BOARD_USE_METADATABUFFERTYPE := true
+BOARD_USE_DMA_BUF := true
+BOARD_USE_ANB_OUTBUF_SHARE := true
+BOARD_USE_IMPROVED_BUFFER := true
+BOARD_USE_NON_CACHED_GRAPHICBUFFER := true
+BOARD_USE_GSC_RGB_ENCODER := true
+BOARD_USE_CSC_HW := false
+BOARD_USE_QOS_CTRL := false
+BOARD_USE_S3D_SUPPORT := true
+BOARD_USE_VP8ENC_SUPPORT := true
+BOARD_USE_HEVCDEV_SUPPORT := true
+
+# HEVC support in libvideocodec
+BOARD_USE_HEVC_HWIP := true
+
+# Video Streaming Rescaling
+TARGET_OMX_LEGACY_RESCALING := true
