@@ -11,6 +11,8 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_j7y17lte
 BOARD_VENDOR := samsung
 PRODUCT_DEVICE := j7y17lte
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
