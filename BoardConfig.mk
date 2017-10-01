@@ -36,10 +36,6 @@ PRODUCT_PACKAGES += \
 #keystore
 BOARD_USES_TRUST_KEYMASTER := true
 
-#lights
-PRODUCT_PACKAGES += \
-	lights.goldfish
-
 #time
 PRODUCT_PACKAGES += \
 	local_time.default
@@ -50,11 +46,4 @@ PRODUCT_PACKAGES += \
 
 #power
 PRODUCT_PACKAGES += \
-	power.default \
-	power.exynos5 \
-	power.goldfish
-
-#vibrator
-PRODUCT_PACKAGES += \
-	vibrator.default \
-	vibrator.goldfish
+	power.universal7870
