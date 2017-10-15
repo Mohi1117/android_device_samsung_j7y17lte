@@ -6,6 +6,7 @@ TARGET_KERNEL_CONFIG := lineage-j7y17lte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/j7y17lte
 
 # Kernel configuration
+TARGET_LINUX_KERNEL_VERSION := 3.10
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_SEPERATED_DT := true
 

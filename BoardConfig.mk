@@ -45,5 +45,10 @@ PRODUCT_PACKAGES += \
 	memtrack.exynos5
 
 #power
+-include hardware/samsung/power/Android.mk
+#hal
 PRODUCT_PACKAGES += \
 	power.universal7870
+
+#twrp
+RECOVERY_VARIANT := twrp
