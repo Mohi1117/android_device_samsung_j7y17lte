@@ -244,6 +244,8 @@ on init
     mkdir /dev/cpuset/surfaceflinger
     write /dev/cpuset/surfaceflinger/cpus 0-2,4-7
     write /dev/cpuset/surfaceflinger/mems 0
+    #camera daemon workaround
+    mkdir /dev/cpuset/camera-daemon
 
     # system-background is for system tasks that should only run on
     # little cores, not on bigs
@@ -280,8 +282,9 @@ on init
     chown system system /dev/cpuset/abnormal/cpus
     chown system system /dev/cpuset/dex2oat/cpus
     chown system system /dev/cpuset/surfaceflinger/cpus
+    chown system system /dev/cpuset/camera-daemon/tasks
 
-    # set system-background to 0775 so SurfaceFlinger can touch it
+    #set system-background to 0775 so SurfaceFlinger can touch it
     chmod 0775 /dev/cpuset/system-background
     chmod 0775 /dev/cpuset/surfaceflinger
 
@@ -303,7 +306,7 @@ on init
     chmod 0664 /dev/cpuset/dex2oat/cpus
     chmod 0664 /dev/cpuset/surfaceflinger/cpus
     chmod 0664 /dev/cpuset/cpus
-
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
     # change own for camera lagging
     chown system system /sys/kernel/hmp/down_threshold
     chown system system /sys/kernel/hmp/up_threshold
@@ -725,25 +728,6 @@ on post-fs-data
 
     # FIDO
     mkdir /data/.fido 0700 system system
-
-    mkdir /data/system 0775 system system
-    mkdir /data/system/heapdump 0700 system system
-    mkdir /data/system/users 0775 system system
-
-    mkdir /data/system_de 0770 system system
-    mkdir /data/system_ce 0770 system system
-
-    mkdir /data/misc_de 01771 system misc
-    mkdir /data/misc_ce 01771 system misc
-
-    mkdir /data/user 0711 system system
-    mkdir /data/user_de 0711 system system
-    symlink /data/data /data/user/0
-
-    mkdir /data/media 0770 media_rw media_rw
-    mkdir /data/media/obb 0770 media_rw media_rw
-
-    init_user0
 
 # [ SEC_SELINUX_PORTING_COMMON
     # reload_policy is move to above
