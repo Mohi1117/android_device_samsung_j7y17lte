@@ -6,7 +6,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_PACKAGES += \
 	fstab.samsungexynos7870 \
 	init.baseband.rc \
+	init.rilchip.rc \
 	init.wifi.rc \
+	init.zygote32.rc \
 	init.samsung.rc \
 	init.samsungexynos7870.rc \
 	init.samsungexynos7870.usb.rc \
