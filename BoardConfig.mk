@@ -3,14 +3,6 @@ TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
 
 DEVICE_PATH := device/samsung/j7y17lte
 
-# cpboot-daemon for modem
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/sbin/cbd:root/sbin/cbd
-
-# samsung's sswap
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/sbin/sswap:root/sbin/sswap
-
 # Inherit board specific defines
 -include $(DEVICE_PATH)/board/*.mk
 
