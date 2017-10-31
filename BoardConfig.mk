@@ -43,4 +43,4 @@ PRODUCT_PACKAGES += \
 	power.universal7870
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_santos10
+TARGET_INIT_VENDOR_LIB := libinit_j7y17lte
