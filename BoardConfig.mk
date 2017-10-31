@@ -1,3 +1,4 @@
+
 #assert
 TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
 
@@ -37,10 +38,10 @@ PRODUCT_PACKAGES += \
 	memtrack.exynos5
 
 #power
--include hardware/samsung/power/Android.mk
+TARGET_POWERHAL_VARIANT := samsung
 #hal
 PRODUCT_PACKAGES += \
-	power.universal7870
+	power.exynos5
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j7y17lte
