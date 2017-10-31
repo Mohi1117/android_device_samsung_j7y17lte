@@ -19,10 +19,10 @@ LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.rilchip.rc
+LOCAL_MODULE            := rild.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := init.rilchip.rc
+LOCAL_SRC_FILES         := rild.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
@@ -55,14 +55,6 @@ LOCAL_MODULE            := init.wifi.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
 LOCAL_SRC_FILES         := init.wifi.rc
-LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE            := init.zygote32.rc
-LOCAL_MODULE_TAGS       := optional eng
-LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := init.zygote32.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
