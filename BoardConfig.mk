@@ -7,6 +7,9 @@ DEVICE_PATH := device/samsung/j7y17lte
 # Inherit board specific defines
 -include $(DEVICE_PATH)/board/*.mk
 
+#power hal path
+-include $(DEVICE_PATH)/power/*.mk
+
 # Inherit from the proprietary version
 -include vendor/samsung/j7y17lte/BoardConfigVendor.mk
 
@@ -38,7 +41,7 @@ PRODUCT_PACKAGES += \
 	memtrack.exynos5
 
 #power
-TARGET_POWERHAL_VARIANT := samsung
+#TARGET_POWERHAL_VARIANT := samsung
 #hal
 PRODUCT_PACKAGES += \
 	power.exynos5
