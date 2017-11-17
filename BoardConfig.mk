@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/gtaxllte
+LOCAL_PATH := device/samsung/j7y17lte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -64,7 +64,7 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aa
 
 # Kernel config
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
-TARGET_KERNEL_CONFIG := lineage-gtaxllte_defconfig
+TARGET_KERNEL_CONFIG := lineage-j7y17lte_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432

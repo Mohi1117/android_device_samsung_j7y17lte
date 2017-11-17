@@ -1,9 +1,9 @@
-ro.product.model=SM-T585
-ro.product.device=gtaxllte
-ro.product.name=gtaxlltexx
-ro.build.product=gtaxllte
-ro.build.description=gtaxlltexx-user 7.0 NRD90M T585XXU2BQE4 release-keys
-ro.build.fingerprint=samsung/gtaxlltexx/gtaxllte:7.0/NRD90M/T585XXU2BQE4:user/release-keys
+ro.product.model=SM-J730GM
+ro.product.device=j7y17lte
+ro.product.name=j7y17ltextc
+ro.build.product=j7y17lte
+ro.build.description=j7y17ltextc-user 7.0 NRD90M J730GMDXU1AQF9 release-keys
+ro.build.fingerprint=samsung/j7y17ltextc/j7y17lte:7.0/NRD90M/J730GMDXU1AQF9:user/release-keys
 
 # Audio
 af.fast_track_multiplier=1
@@ -31,7 +31,7 @@ dalvik.vm.isa.arm.features=default
 
 # Graphics
 ro.opengles.version=196610
-ro.sf.lcd_density=240
+ro.sf.lcd_density=420
 debug.hwc.force_gpu=1
 lockscreen.rot_override=true
 
