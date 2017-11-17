@@ -1,4 +1,3 @@
-
 #assert
 TARGET_OTA_ASSERT_DEVICE := j7y17lte,j7y17ltem,j7y17ltextc
 
@@ -6,9 +5,6 @@ DEVICE_PATH := device/samsung/j7y17lte
 
 # Inherit board specific defines
 -include $(DEVICE_PATH)/board/*.mk
-
-#power hal path
--include $(DEVICE_PATH)/power/*.mk
 
 # Inherit from the proprietary version
 -include vendor/samsung/j7y17lte/BoardConfigVendor.mk
@@ -40,11 +36,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	memtrack.exynos5
 
+# Samsung HALs
+TARGET_AUDIOHAL_VARIANT := samsung
+TARGET_POWERHAL_VARIANT := samsung
+TARGET_SEC_FP_HAL_VARIANT := bauth
+
 #power
-#TARGET_POWERHAL_VARIANT := samsung
+#-include hardware/samsung/power/Android.mk
 #hal
 PRODUCT_PACKAGES += \
-	power.exynos5
+	power.universal7870
+
+#lights
+PRODUCT_PACKAGES += \
+        lights.universal7870
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j7y17lte

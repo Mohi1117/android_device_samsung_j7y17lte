@@ -774,7 +774,7 @@ service gpsd /system/bin/gpsd
     user gps
     group system inet wakelock
     ioprio be 0
-    seclabel u:r:gpsd:s0
+#    seclabel u:r:gpsd:s0
 
 # LPM
 service lpm /system/bin/lpm
