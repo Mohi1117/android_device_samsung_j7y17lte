@@ -156,9 +156,6 @@ BOARD_PROVIDES_RILD := true
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_sec
-
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
