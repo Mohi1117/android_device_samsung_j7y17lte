@@ -15,7 +15,7 @@
     </array>
     <item name="radio.scanning">116.8</item>
     <item name="radio.active">112</item>
-    <item name="battery.capacity">7300</item>
+    <item name="battery.capacity">3600</item>
     <item name="cpu.idle">4.44</item>
     <item name="cpu.awake">10.56</item>
     <array name="cpu.speeds">
