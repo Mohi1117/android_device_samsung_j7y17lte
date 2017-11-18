@@ -44,8 +44,8 @@ PRODUCT_PACKAGES += \
     ueventd.samsungexynos7870.rc
 
 # cpboot-daemon
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/cbd:root/sbin/cbd
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/ramdisk/cbd:root/sbin/cbd
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -141,10 +141,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_rev00.xml:system/etc/mixer_paths_rev00.xml
+	$(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
+	$(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
 
 PRODUCT_PACKAGES += \
     audio.primary.universal7870_32 \
@@ -159,8 +158,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml  \
-    $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
+	$(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
+        $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -169,8 +169,9 @@ PRODUCT_COPY_FILES += \
 
 # Keys
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:/system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/configs/keylayout/sec_touchscreen.kl:/system/usr/keylayout/sec_touchscreen.kl
+	$(LOCAL_PATH)/configs/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+	$(LOCAL_PATH)/configs/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+	$(LOCAL_PATH)/configs/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
