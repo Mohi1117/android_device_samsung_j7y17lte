@@ -43,6 +43,14 @@ PRODUCT_PACKAGES += \
     init.wifi.rc \
     ueventd.samsungexynos7870.rc
 
+#fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd \
+    fingerprint.exynos5
+# Permissions
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
 # cpboot-daemon
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/ramdisk/cbd:root/sbin/cbd
@@ -160,9 +168,8 @@ PRODUCT_COPY_FILES += \
 
 # Keys
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-	$(LOCAL_PATH)/configs/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-	$(LOCAL_PATH)/configs/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
+	$(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	$(LOCAL_PATH)/configs/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
