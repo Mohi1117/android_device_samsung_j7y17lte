@@ -39,7 +39,7 @@ on post-fs-data
     chmod 0666 /data/misc/conn/.wificable.info
 
     # for WIFI MEMDUMP
-    write /data/misc/conn/.memdump.info 3
+    write /data/misc/conn/.memdump.info 0
     chown system root /data/misc/conn/.memdump.info
     chmod 0666 /data/misc/conn/.memdump.info
 
