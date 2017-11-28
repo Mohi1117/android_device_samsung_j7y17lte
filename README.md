@@ -1,7 +1,9 @@
 Device configuration for the Samsung Galaxy J7-Pro 2017
 
 Copyright (C) 2017 The LineageOS Project
+
 Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
+
 Copyright (C) 2017 Yukick1117 <github.com/yukick1117>
 
  Licensed under the Apache License, Version 2.0 (the "License");
