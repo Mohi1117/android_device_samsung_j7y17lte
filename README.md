@@ -1,7 +1,8 @@
-Device configuration for the Samsung Galaxy Tab A
+Device configuration for the Samsung Galaxy J7-Pro 2017
 
 Copyright (C) 2017 The LineageOS Project
 Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
+Copyright (C) 2017 Yukick1117 <github.com/yukick1117>
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -13,9 +14,9 @@ Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
 
 * Description
 
-  This repository is for LineageOS on Samsung Galaxy Tab A (gtaxllte)
+  This repository is for LineageOS on Samsung Galaxy J7-Pro 2017 (j7y17lte)
 
-* How To Build LineageOS for Samsung Galaxy Tab A
+* How To Build LineageOS for Samsung Galaxy J7-Pro 2017
 
   - Make a workspace
 
@@ -31,11 +32,6 @@ repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="Valera1978/android_device_samsung_gtaxllte" path="device/samsung/gtaxllte" remote="github" />
-  <project name="Valera1978/android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870" remote="github" revision="cm-14.1_perm" />
-  <project name="Valera1978/android_vendor_samsung_gtaxllte" path="vendor/samsung/gtaxllte" remote="github" />
-  <project name="Valera1978/android_hardware_samsung_slsi-cm_exynos" path="hardware/samsung_slsi-cm/exynos" remote="github" />
-  <project name="Valera1978/android_hardware_samsung_slsi-cm_exynos7870" path="hardware/samsung_slsi-cm/exynos7870" remote="github" />
   <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" />
   <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" />
   <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos5" path="hardware/samsung_slsi-cm/exynos5" remote="github" />
@@ -61,4 +57,4 @@ repo sync
 
   - Build cm14
 
-brunch gtaxllte
+brunch j7y17lte
