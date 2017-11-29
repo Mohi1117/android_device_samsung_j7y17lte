@@ -43,24 +43,23 @@ TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_CORTEX_A53 := true
 
 # Binder
-#TARGET_USES_64_BIT_BINDER := true
-TARGET_USES_64_BIT_BINDER := false
+TARGET_USES_64_BIT_BINDER := true
 
 # Extracted with libbootimg
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/dtb.img
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-#BOARD_KERNEL_SEPARATED_DT := true
-#TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_KERNEL_SEPARATED_DT := true
+TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-#TARGET_USES_UNCOMPRESSED_KERNEL := true
+TARGET_USES_UNCOMPRESSED_KERNEL := true
 # CPUSETS
 ENABLE_CPUSETS := true
 
