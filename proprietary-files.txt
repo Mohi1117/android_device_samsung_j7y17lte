@@ -29,8 +29,8 @@ vendor/firmware/setfile_3m3.bin
 vendor/firmware/setfile_imx258.bin
 vendor/lib/libHpr_LocFace_mvfd_v1.0.so
 vendor/lib/libHpr_LocLandmark_sdm_v1.0.so
-vendor/lib/libOpenCv.so:lib/libOpenCv.so
-vendor/lib/libsomp.so:lib/libsomp.so
+vendor/lib/libOpenCv.so
+vendor/lib/libsomp.so
 
 #DRM
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
@@ -92,8 +92,8 @@ app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-vendor/lib/libMcClient.so:lib/libMcClient.so
-vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
+vendor/lib/libMcClient.so
+vendor/lib/libMcRegistry.so
 
 #omx
 lib/omx/libOMX.Exynos.AVC.Decoder.so
